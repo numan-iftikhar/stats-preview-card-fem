@@ -25,17 +25,39 @@
       }
     </style>
   </head>
-  <body class="flex flex-col justify-center items-center h-screen">
-    <main>
+  <!-- tailwind customise -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            veryDarkBlue: "hsl(233, 47%, 7%)",
+            darkDesaturatedBlue: "hsl(244, 38%, 16%)",
+            softViolet: "hsl(277, 64%, 61%)",
+            white: "hsl(0, 0%, 100%)",
+            slightlyTransparentWhite: "hsla(0, 0%, 100%, 0.75)",
+            transparentWhite: "hsla(0, 0%, 100%, 0.6)",
+          },
+        },
+      },
+    };
+  </script>
+  <body
+    class="flex flex-col justify-center items-center h-screen bg-veryDarkBlue"
+  >
+    <main class="w-2/3 md:flex bg-darkDesaturatedBlue">
       <!-- left side -->
-      <div class="left">
-        <h1>Get insights that help your business grow.</h1>
-        <p>
+      <div class="left w-1/2 p-10">
+        <h1 class="text-white">
+          Get <span class="text-softViolet">insights</span> that help your
+          business grow.
+        </h1>
+        <p class="text-transparentWhite">
           Discover the benefits of data analytics and make better decisions
           regarding revenue, customer experience, and overall efficiency.
         </p>
 
-        <div>
+        <div class="stats text-white">
           <p>10k+ companies</p>
           <p>314 templates</p>
           <p>12m+ queries</p>
@@ -43,8 +65,8 @@
       </div>
 
       <!-- right side -->
-      <div class="right">
-        <img src="" alt="" />
+      <div class="right md:w-1/2">
+        <img class="h-full" src="images/image-header-desktop.jpg" alt="" />
       </div>
     </main>
 
