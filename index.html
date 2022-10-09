@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Frontend Mentor | Stats preview card component</title>
+    <title>Stats preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -22,6 +22,10 @@
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
+      }
+      .right{
+        min-height: 265px;
+        background-image: url(images/image-header-desktop.jpg);
       }
     </style>
     <!-- tailwind customise -->
@@ -49,12 +53,7 @@
       class="my-20 md:my-0 w-2/3 md:flex md:flex-row-reverse bg-darkDesaturatedBlue rounded-lg"
     >
       <!-- right side -->
-      <div class="right md:w-1/2">
-        <img
-          class="min-w-full h-full rounded-t-lg md:rounded-tl-none md:rounded-r-lg"
-          src="images/image-header-desktop.jpg"
-          alt=""
-        />
+      <div class="right bg-softViolet bg-center bg-blend-multiply bg-cover bg-no-repeat md:w-1/2 rounded-t-lg md:rounded-tl-none md:rounded-r-lg">
       </div>
 
       <!-- left side -->
@@ -70,7 +69,7 @@
 
         <!-- stats -->
         <div
-          class="stats text-white md:flex space-y-10 md:space-y-0 md:space-x-10"
+          class="stats text-white flex flex-col md:flex-row md:flex-wrap justify-between space-y-10 md:space-y-0"
         >
           <div>
             <h2 class="text-xl font-bold">10k+</h2>
